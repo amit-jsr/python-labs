@@ -1,0 +1,9 @@
+.vscode/
+.idea/
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+*road_map.md
