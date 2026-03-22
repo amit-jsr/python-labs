@@ -3,7 +3,7 @@
 
 ---
 
-## 📁 Folder Structure
+## Directory Structure
 
 | # | Folder | Topic |
 |---|---|---|
@@ -13,8 +13,6 @@
 | 4 | `io/` | File I/O, Serialization & Error Handling |
 | 5 | `performance/` | Performance & Concurrency |
 | 6 | `testing/` | Debugging, CLI & Testing |
-
-> Full checklist and notes in [Plan.md](./Plan.md)
 
 ---
 
