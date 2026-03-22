@@ -1,13 +1,24 @@
-# Python Labs
-
-# 🐍 Python Revision Plan
-
-> Focus: Core Python skills needed as a junior engineer leveling up.
-> NLP/DL topics are tracked separately in the nlp-labs repo.
+# Python Lab
+> Python fundamentals repo — practice code and reference notes.
 
 ---
 
-## Week 1 — Python Internals
+## 📁 Folder Structure
+
+| # | Folder | Topic |
+|---|---|---|
+| 1 | `internals/` | Python Internals |
+| 2 | `stdlib/` | Data Structures & Standard Library |
+| 3 | `oop/` | OOP |
+| 4 | `io/` | File I/O, Serialization & Error Handling |
+| 5 | `performance/` | Performance & Concurrency |
+| 6 | `testing/` | Debugging, CLI & Testing |
+
+> Full checklist and notes in [Plan.md](./Plan.md)
+
+---
+
+## 1. Python Internals
 
 - [ ] `*args` and `**kwargs`
 - [ ] Decorators — `@property`, `@staticmethod`, custom decorators
@@ -24,7 +35,7 @@
 
 ---
 
-## Week 2 — Data Structures & Standard Library
+## 2. Data Structures & Standard Library
 
 - [ ] List / dict / set comprehensions
 - [ ] `collections` — `Counter`, `defaultdict`, `namedtuple`, `deque`
@@ -39,7 +50,7 @@
 
 ---
 
-## Week 3 — OOP
+## 3. OOP
 
 - [ ] Classes, `__init__`, instance vs class variables
 - [ ] Inheritance and `super()`
@@ -56,14 +67,12 @@
 
 ---
 
-## Week 4 — File I/O, Serialization & Error Handling
+## 4. File I/O, Serialization & Error Handling
 
 - [ ] Reading/writing `.txt`, `.csv`
 - [ ] `pathlib.Path` — modern file path handling
 - [ ] Exception handling — `try/except/finally`, custom exceptions
 - [ ] `logging` module — replacing `print` with proper logs
-
-### 📄 File Formats
 - [ ] **JSON** — `json.load()`, `json.dump()`, `json.dumps()`, nested structures, handling edge cases
 - [ ] **Parquet** — columnar format, read/write with `pandas` (`read_parquet`, `to_parquet`), why it's faster than CSV
 - [ ] **CSV vs JSON vs Parquet** — know when to use which (size, schema, speed)
@@ -71,7 +80,7 @@
 
 ---
 
-## Week 5 — Performance & Tooling
+## 5. Performance & Concurrency
 
 - [ ] Generators vs lists — memory trade-offs
 - [ ] `multiprocessing` vs `threading` — when to use which
@@ -82,16 +91,16 @@
 
 ---
 
-## Week 6 — Debugging, CLI & Project Structure
+## 6. Debugging, CLI & Testing
 
-### 🐛 Debugging (Interview Hot Topic)
+### Debugging
 - [ ] `pdb` — `python -m pdb script.py`, setting breakpoints in code
 - [ ] `breakpoint()` — built-in shortcut (Python 3.7+)
 - [ ] Key `pdb` commands — `n` (next), `s` (step), `c` (continue), `p` (print), `l` (list), `q` (quit)
 - [ ] VS Code debugger — launch configs, watch variables, call stack
 - [ ] Common debugging patterns — print vs pdb, when to use each
 
-### 🛠️ CLI & Project Structure
+### CLI & Testing
 - [ ] `argparse` — building CLI tools
 - [ ] Virtual environments — `venv`, `pip`, `requirements.txt`
 - [ ] Project layout — `src/`, `tests/`, `__init__.py`
@@ -100,7 +109,7 @@
 
 ---
 
-## Reference Projects in This Repo
+## Reference Projects
 
 | Project | Concepts to Practice |
 |---|---|
