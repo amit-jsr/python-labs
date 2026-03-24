@@ -39,11 +39,8 @@ def add(a, b):
     return a + b
 
 # --- 5. unpacking with * and ** when calling a function ---
-def greet(name, age, city):
-    print(f"Hi {name}, age {age}, from {city}")
-
-info_list = ["Alice", 30]           # unpack as positional args
-info_dict = {"city": "New York"}    # unpack as keyword args
+def greet(name, age, gender, city):
+    print(f"Hi {name}, age {age}, gender {gender} from {city}")
 
 
 # ============================================================
@@ -62,4 +59,7 @@ if __name__ == "__main__":
     print(f"Result: {result}")
 
     print("\n--- unpacking * and ** ---")
+    info_list = ["Alice", 30]           # unpack as positional args
+    info_dict = {"gender": "female", "city": "New York"}    # unpack as keyword args
+    #info_dict = {"gender": "female", "city": "New York", "gender": "male", "gender":"other"}    # unpack as keyword args, note that duplicate keys will be overwritten later ones 
     greet(*info_list, **info_dict)
