@@ -7,7 +7,7 @@
 
 | # | Folder | Topic |
 |---|---|---|
-| 1 | `internals/` | Python Internals |
+| 1 | `internals/` | Python Essentials |
 | 2 | `stdlib/` | Data Structures & Standard Library |
 | 3 | `oop/` | OOP |
 | 4 | `io/` | File I/O, Serialization & Error Handling |
@@ -16,7 +16,7 @@
 
 ---
 
-## 1. Python Internals
+## 1. Python Essentials
 
 - [ ] `*args` and `**kwargs`
 - [ ] Decorators — `@property`, `@staticmethod`, custom decorators
