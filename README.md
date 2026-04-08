@@ -7,12 +7,12 @@
 
 | # | Folder | Topic |
 |---|---|---|
-| 1 | `internals/` | Python Essentials |
-| 2 | `stdlib/` | Data Structures & Standard Library |
-| 3 | `oop/` | OOP |
-| 4 | `io/` | File I/O, Serialization & Error Handling |
-| 5 | `performance/` | Performance & Concurrency |
-| 6 | `testing/` | Debugging, CLI & Testing |
+| 1 | `core_python/` | Python Essentials |
+| 2 | `std_library/` | Data Structures & Standard Library |
+| 3 | `object_oriented/` | OOP |
+| 4 | `file_io/` | File I/O, Serialization & Error Handling |
+| 5 | `performance_async/` | Performance & Concurrency |
+| 6 | `debug_testing/` | Debugging, CLI & Testing |
 
 ---
 
