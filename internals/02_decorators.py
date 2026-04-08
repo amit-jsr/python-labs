@@ -14,9 +14,13 @@
 #       return wrapper
 #
 # Key built-ins: @property, @<prop>.setter, @staticmethod
+# Notes:
+#   Decorators can be stacked (multiple @decorators on the same function) and are applied from the bottom up.
+#   Decorators cannot be comma-separated on one line.
 # ============================================================
 
 import time
+import json
 import functools
 
 
@@ -51,6 +55,44 @@ def slow_add(a, b):
     time.sleep(0.1)     # simulate some work
     return a + b
 
+# --- 3. JSON field extractor decorator: returns only the State value ---
+def state(func):
+    """Logs a call, then extracts the 'State' field from returned JSON text."""
+    def wrapper(*args, **kwargs):
+        print(f"[test] Running {func.__name__} with args={args}, kwargs={kwargs}")
+        result = func(*args, **kwargs)
+        result = json.loads(result).get('State', 'Unknown')
+        print(f"[test] {func.__name__} finished with result={result}")
+        return result
+    return wrapper
+
+@state
+def get_address(text):
+    """Returns title-cased text so the state decorator can parse it as JSON."""
+    return text.title()
+
+
+# --- 4. Math-transform decorators for chaining demos ---
+def decorator1(func):
+    """Adds 1 to the wrapped function's numeric result."""
+    def wrapper(x):
+        result = func(x)
+        return result + 1
+    return wrapper
+
+def decorator2(func):
+    """Squares the wrapped function's numeric result."""
+    def wrapper(x):
+        result = func(x)
+        return result ** 2
+    return wrapper
+
+@decorator2
+@decorator1
+def foo(x):
+    return x
+
+
 
 # --- 3. Class with @property, @<prop>.setter, @staticmethod ---
 class Circle:
@@ -79,7 +121,6 @@ class Circle:
         """Unit conversion helper – doesn't need self or the class."""
         return cm / 100
 
-
 # ============================================================
 if __name__ == "__main__":
     print("--- my_decorator ---")
@@ -103,3 +144,5 @@ if __name__ == "__main__":
         print(f"caught error → {e}")
 
     print(f"50 cm in metres: {Circle.cm_to_m(50)}")
+
+    print(foo(3))  # Output: 8, because ((3 + 1) * 2)
