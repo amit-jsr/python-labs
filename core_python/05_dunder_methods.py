@@ -1,24 +1,21 @@
 # ============================================================
 # Dunder (Magic) Methods
 # ============================================================
-# Dunder methods customize how built-in operations work with custom objects.
+# Dunder methods let you customize how built-in operations work.
 #
-# Most useful dunder methods:
+# Categories:
 # - String: __repr__, __str__, __format__
 # - Container: __len__, __getitem__, __setitem__, __contains__, __iter__, __next__
 # - Comparison: __eq__, __lt__, __le__, __gt__, __ge__
-# - Arithmetic: __add__, __sub__, __mul__, __truediv__, __floordiv__, __mod__, __pow__
-# - Context managers: __enter__, __exit__
-# - Callable: __call__
-# - Object lifecycle: __init__, __new__, __del__
-# - Hashing: __hash__, __bool__
+# - Arithmetic: __add__, __sub__, __mul__, __truediv__, __mod__, __pow__
+# - Other: __call__, __enter__, __exit__, __hash__, __bool__
 
 # Notes:
-# - __repr__ should be unambiguous (debug); __str__ should be readable (user).
-# - Return NotImplemented (not False) for incompatible type comparisons.
-# - __getitem__ enables indexing and makes objects iterable.
-# - __lt__ is used by sorted() and comparison operators.
-# - Dunder method names are FIXED by Python — you cannot use custom names.
+# - __repr__ for debugging, __str__ for display
+# - Return NotImplemented for incompatible types (not False)
+# - __getitem__ enables indexing/slicing and iteration
+# - __lt__ enables sorted() and < operator
+# - Names are fixed — you can't rename them
 
 class Point:
     """2D point with comparison and arithmetic."""
